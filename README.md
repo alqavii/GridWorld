@@ -7,7 +7,7 @@ A simple reinforcement learning project that demonstrates **tabular Q-learning**
 
 ---
 
-## 🧩 Features
+## Features
 
 - Adjustable hyperparameters: `alpha`, `gamma`, `epsilon`, and training episodes
 - Plots of:

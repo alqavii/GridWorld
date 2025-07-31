@@ -1,9 +1,9 @@
-# 🧠 Gridworld Q-Learning Visualizer
+# 🤖 Gridworld Q-Learning Visualizer
 
 A simple reinforcement learning project that demonstrates **tabular Q-learning** in a 5x5 gridworld. The agent learns to reach a goal while avoiding holes, with all learning visualized using **Streamlit**.
 
-📍 **Try it live:**  
-👉 [https://gridworld.streamlit.app/](https://gridworld.streamlit.app/)
+ **Try it live:**  
+[https://gridworld.streamlit.app/](https://gridworld.streamlit.app/)
 
 ---
 

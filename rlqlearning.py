@@ -59,7 +59,7 @@ class tabQ:
         self.steps += 1
         reward = -1 
         if new in self.holes:
-            reward = -10
+            reward = -30
         elif new == self.goal:
             reward = 100
             done = True

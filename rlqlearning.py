@@ -163,7 +163,7 @@ if st.button("🚀 Train Agent"):
     st.subheader("🗺️ Average Q-Value per State")
     qgrid = self.avg_q_grid()
     fig2, ax2 = plt.subplots()
-    sns.heatmap(qgrid, annot=True, cmap="YlGnBu", square=True, cbar=True, linewidths=0.3, linecolor='black', ax=ax2)
+    sns.heatmap(qgrid, annot=True, fmt=".2f", cmap="YlGnBu", square=True, cbar=True, linewidths=0.3, linecolor='black', ax=ax2)
     ax2.set_title("Top Left: Target, Bottom Right: Start")
     st.pyplot(fig2)
 
@@ -171,6 +171,6 @@ if st.button("🚀 Train Agent"):
     st.subheader("🌀 State Value per Cell (Incoming Q-values)")
     state_val_grid = self.state_value_grid()
     fig3, ax3 = plt.subplots()
-    sns.heatmap(state_val_grid, annot=True, cmap="coolwarm", square=True, cbar=True, linewidths=0.3, linecolor='black', ax=ax3)
+    sns.heatmap(state_val_grid, annot=True, fmt=".2f", cmap="coolwarm", square=True, cbar=True, linewidths=0.3, linecolor='black', ax=ax3)
     ax3.set_title("Higher = Better")
     st.pyplot(fig3)

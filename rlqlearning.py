@@ -137,7 +137,7 @@ st.title("🤖 Q-learning Gridworld Agent")
 alpha = st.slider("Learning rate (α)", 0.01, 1.0, 0.1, 0.01)
 gamma = st.slider("Discount factor (γ)", 0.1, 1.0, 0.9, 0.01)
 epsilon = st.slider("Exploration rate (ε)", 0.0, 1.0, 0.1, 0.01)
-episodes = st.slider("Training Episodes", 100, 5000, 1000, 100)
+episodes = st.slider("Training Episodes", 10, 1000, 250, 10)
 decay = st.checkbox("Decay Epsilon", value=True)
 
 if st.button("🚀 Train Agent"):
@@ -160,7 +160,7 @@ if st.button("🚀 Train Agent"):
     qgrid = self.avg_q_grid()
     fig2, ax2 = plt.subplots()
     sns.heatmap(qgrid, annot=True, cmap="YlGnBu", square=True, cbar=True, linewidths=0.3, linecolor='black', ax=ax2)
-    ax2.set_title("Top-left = State 24, Bottom-right = State 0")
+    ax2.set_title("Top Left: Target, Bottom Right: Start")
     st.pyplot(fig2)
 
     # --- State Value Heatmap ---
@@ -168,5 +168,5 @@ if st.button("🚀 Train Agent"):
     state_val_grid = self.state_value_grid()
     fig3, ax3 = plt.subplots()
     sns.heatmap(state_val_grid, annot=True, cmap="coolwarm", square=True, cbar=True, linewidths=0.3, linecolor='black', ax=ax3)
-    ax3.set_title("Higher = More desirable to arrive")
+    ax3.set_title("Higher = Better")
     st.pyplot(fig3)

@@ -147,6 +147,10 @@ if st.button("🚀 Train Agent"):
     self.epsilon = epsilon
     self.train(episodes=episodes, max_steps=1000, decay_epsilon=decay)
 
+    st.subheader("🏆 Training Summary")
+
+    st.subheader(f"Steps Needed: {self.stepsTaken[-1]}")
+
     st.subheader("📈 Steps per Episode")
     fig1, ax1 = plt.subplots()
     ax1.plot(self.stepsTaken)
